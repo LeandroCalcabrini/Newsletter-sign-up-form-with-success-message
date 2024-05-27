@@ -1,42 +1,145 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.main{
+  height: 100vh;
+  background-color: hsl(235, 18%, 26%);
+  display: grid;
+  place-content: center;
+}
+
+
+.card{
+  background-color: white;
+  border-radius: 20px;
+  width: 400px;
+  margin: 20px;
+
+}
+.card-left{
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.card-left.active{
+  display: none;
+}
+
+.card-left-title{
+  font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
+  color: hsl(234, 29%, 20%);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.card-left-text{
+  color: hsl(234, 29%, 20%);
+  font-weight: 400;
+  margin: 20px 0px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-left-list{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.card-left-formulario{
+  display: flex;
+  flex-direction: column;
+}
+
+.card-left-email{
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-email-input{
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  border: solid 1px hsl(231, 7%, 60%);
+  cursor: pointer;
+}
+
+.card-email-input.active{
+  border: solid 1px red;
+  background-color: rgba(255, 0, 0, 0.144);
+}
+
+/* ::placeholder.active{
+  color: red;
+  opacity: 1;
+} */
+
+
+
+.card-btn{
+  color: white;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card-btn:hover{
+  background:linear-gradient(70deg, rgba(255,52,117,1) 0%, rgb(243, 115, 41) 100%);
+}
+
+.message-error{
+  color: red;
+  font-size: 12px;
+}
+
+/* card subscribing */
+
+.card-subscribing{
+  display: none;
+}
+
+.card-subscribing.active{
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-subscribing-title{
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+}
+
+.card-subscribing-text{
+  color: hsl(234, 29%, 20%);
+}
+
+.email-selected{
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+}
+
+
+@media(max-width:400px){
+  .card{
+    width: auto;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
